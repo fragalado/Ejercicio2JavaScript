@@ -82,6 +82,19 @@ function evaluarCalcPesoCorporal(form){
 	let altura = form.alturaForm.value;
 	let sexo = form.sexoForm.value;
 	sexo = sexo.toLowerCase();
-	let resultado = (sexo == "hombre" || sexo == "masculino") ? 50+((altura-150)/4)*3 + (edad - 20)/4 : (50+((altura-150)/4)*3 + (edad - 20)/4)*0.9;
-	form.resultadoPesoForm.value = eval(resultado);
+	
+	let ok = true;
+	if(edad < 1 || edad > 100){
+		alert("La edad tiene que estar entre 1 y 100");
+		ok=false;
+	}
+	if(altura < 1){
+		alert("La altura tiene que ser mayor que 1");
+		ok=false;
+	}
+	
+	if(ok){
+		let resultado = (sexo == "hombre" || sexo == "masculino") ? 50+((altura-150)/4)*3 + (edad - 20)/4 : (50+((altura-150)/4)*3 + (edad - 20)/4)*0.9;
+		form.resultadoPesoForm.value = eval(resultado);
+	}
 }
