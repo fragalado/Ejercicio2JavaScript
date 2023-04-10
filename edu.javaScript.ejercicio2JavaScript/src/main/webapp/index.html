@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="script/ejercicios.js"></script>
+</head>
+<body>
+	<button onclick="ejercicio1()">Ejercicio 1</button><br>
+	<button onclick="ejercicio2()">Ejercicio 2</button>
+	
+	<!-- EJERCICIO 3 -->
+	<h1>Ejercicio 3</h1>
+	<form>
+		<label>Introduce un valor:</label>
+		<input type="number" name="formValor">
+		<input type="button" name="enviarForm" value="Enviar" onclick="ejercicio3()">
+	</form>
+	
+	
+	<!-- CALCULADORA FALSA (EJERCICIO 4) -->
+	<h1>Calculadora falsa</h1>
+	<form name="formCalculadoraFalsa">
+		<input type="text" name="formOperaciones"><br>
+		<input type="button" name="enviarFormCalculadora" value="Enviar" onclick="evaluar(this.form)">
+		<br><br>
+		Resulado:<br>
+		<input type="text" name="resultadoOperacion" value="0"><br>
+		<input type="reset" value="Resetear">
+	</form>
+	
+	
+	<!-- CALCULADORA PESO CORPORAL -->
+	<h1>Calculadora peso corporal</h1>
+	<form name="calculadoraPesoCorporal">
+		Edad:
+		<input type="number" name="edadForm" min="1">
+		<br>
+		Altura:
+		<input type="number" name="alturaForm" min="1">
+		<br>
+		Sexo:
+		<input type="text" name="sexoForm">
+		<br>
+		<input type="button" name="enviarForm" value="Enviar" onclick="evaluarCalcPesoCorporal(this.form)">
+		<br><br>
+		Peso estimado: <br>
+		<input type="text" name="resultadoPesoForm"><br>
+		<input type="reset" value="Resetear">
+	</form>
+</body>
+</html>
